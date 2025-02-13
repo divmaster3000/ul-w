@@ -1,9 +1,73 @@
 import { createSystem, defineConfig } from "@chakra-ui/react";
 
+const COMMON_PALETTE = {
+  primary: {
+    50: { value: "#EBF1FE" },
+    100: { value: "#D7E3FD" },
+    200: { value: "#B0C6FC" },
+    300: { value: "#87A5F6" },
+    400: { value: "#6889EE" },
+    500: { value: "#395FE3" },
+    600: { value: "#2948C3" },
+    700: { value: "#1C34A3" },
+    800: { value: "#122383" },
+    900: { value: "#0A176C" },
+  },
+  success: {
+    50: { value: "#F4FDEC" },
+    100: { value: "#E9FCD9" },
+    200: { value: "#CEFAB5" },
+    300: { value: "#A9F08C" },
+    400: { value: "#85E16C" },
+    500: { value: "#53CE40" },
+    600: { value: "#35B12E" },
+    700: { value: "#209423" },
+    800: { value: "#14771E" },
+    900: { value: "#0C621B" },
+  },
+  warning: {
+    50: { value: "#FEFBE5" },
+    100: { value: "#F3EFE1" },
+    200: { value: "#FEEE99" },
+    300: { value: "#FEE266" },
+    400: { value: "#FDD640" },
+    500: { value: "#FCC202" },
+    600: { value: "#D8A101" },
+    700: { value: "#B58201" },
+    800: { value: "#926500" },
+    900: { value: "#785100" },
+  },
+  error: {
+    50: { value: "#FEF3E8" },
+    100: { value: "#FEE8D1" },
+    200: { value: "#FECCA4" },
+    300: { value: "#FEA877" },
+    400: { value: "#FD8655" },
+    500: { value: "#FC4E1E" },
+    600: { value: "#D83115" },
+    700: { value: "#B51A0F" },
+    800: { value: "#92090A" },
+    900: { value: "#78050E" },
+  },
+  info: {
+    50: { value: "#E9F4FF" },
+    100: { value: "#D3E9FF" },
+    200: { value: "#A6D1FF" },
+    300: { value: "#7AB5FF" },
+    400: { value: "#599CFF" },
+    500: { value: "#2374FF" },
+    600: { value: "#1959DB" },
+    700: { value: "#1142B7" },
+    800: { value: "#0B2E93" },
+    900: { value: "#061F7A" },
+  },
+};
+
 const lightTheme = defineConfig({
   theme: {
     tokens: {
       colors: {
+        ...COMMON_PALETTE,
         neutral: {
           10: { value: "#FFFFFF" },
           50: { value: "#F9FAFB" },
@@ -26,6 +90,7 @@ const darkTheme = defineConfig({
   theme: {
     tokens: {
       colors: {
+        ...COMMON_PALETTE,
         neutral: {
           10: { value: "#222630" },
           50: { value: "#2A303C" },

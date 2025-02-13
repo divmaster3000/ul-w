@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react";
+
 import App from "./App.tsx";
+import { ThemeProvider } from "./theme/theme_provider.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <ChakraProvider value={defaultSystem}>
+  <ThemeProvider>
     <App />
-  </ChakraProvider>
+  </ThemeProvider>,
 );
