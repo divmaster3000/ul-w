@@ -1,7 +1,8 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { FC } from "react";
-import { useThemeDetector } from "../hooks/use_theme_detector";
+
 import { lightThemeSystem, darkThemeSystem } from "./Theme";
+import { useThemeDetector } from "../hooks/use_theme_detector";
 
 type Props = {
   children: React.ReactElement;
